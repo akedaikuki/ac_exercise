@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 載入 bootstrap@5.3 提供的 CSS 檔案 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- 載入 fontawesome.com 提供的 CSS 檔案 -->
+  <link rel="stylesheet" href="https://kit.fontawesome.com/0ddd9c88aa.css" crossorigin="anonymous">
+  <!--  載入 CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <!--  載入文字樣式  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <title>My Friends List</title>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example">
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><i class="fa-solid fa-user-group me-2 pt-2"></i></a><label
+        class="navbar-brand pt-2">My Friends List</label>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html"><i
+                class="fa-solid fa-house-chimney me-2 pt-3"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./CloseFriends.html"><i class="fa-solid fa-hand-holding-heart me-2 pt-3"></i>Close
+              Friends <span class="badge bg-secondary top-0 start-100" id="badge" >0</span></a> 
+            
+          </li>
+        </ul>
+        <form class="d-flex" role="search" id="search-form">
+          <input class="form-control me-2" type="search" placeholder="Search Name..." aria-label="Search"
+            id="search-input">
+          <button class="btn btn-outline-success" type="submit" id="search-submit-button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 使用者列表 幻燈片 -->
+  <div class="carousel-container" id="carousel-container">
+    <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" style="background-color:powderblue" width="200" height="100">
+
+          <div class="first-carousel" id="first-carousel">
+            <img id="first-carousel-img" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered src="..." class="d-block h-100% w-100% carousel-img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="first-h3" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered id="first-h3">First Close Friend</h3>
+              <div class="carousel-info">
+                <div class="carousel-region">
+                  <i class="fa-solid fa-globe " style=" color: #ffffff;"></i>
+                  <h6 id="first-carousel-region"></h6>
+                </div>
+                <div class="carousel-birthday">
+                  <i class="fa-solid fa-gift" style=" color: #ffffff;"></i>
+                  <h6 id="first-carousel-birthday"></h6>
+                </div>
+                <div class="carousel-age">
+                  <i class="fa-solid fa-calendar-check" style=" color: #ffffff;"></i>
+                  <h6 id="first-carousel-age"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-item" style="background-color:powderblue" width="200" height="100">
+
+          <div class="second-carousel" id="second-carousel">
+            <img id="second-carousel-img" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered src="..." class="d-block h-100% w-100% carousel-img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="second-h3" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered id="second-h3">Second Close Friend</h3>
+              <div class="carousel-info">
+                <div class="carousel-region">
+                  <i class="fa-solid fa-globe " style=" color: #ffffff;"></i>
+                  <h6 id="second-carousel-region"></h6>
+                </div>
+                <div class="carousel-birthday">
+                  <i class="fa-solid fa-gift" style=" color: #ffffff;"></i>
+                  <h6 id="second-carousel-birthday"></h6>
+                </div>
+                <div class="carousel-age">
+                  <i class="fa-solid fa-calendar-check" style=" color: #ffffff;"></i>
+                  <h6 id="second-carousel-age"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-item" style="background-color:powderblue" width="200" height="100">
+
+          <div class="third-carousel" id="third-carousel">
+            <img id="third-carousel-img" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered src="..." class="d-block h-100% w-100% carousel-img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="third-h3" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered id="third-h3">Third Close Friend</h3>
+              <div class="carousel-info">
+                <div class="carousel-region">
+                  <i class="fa-solid fa-globe " style=" color: #ffffff;"></i>
+                  <h6 id="third-carousel-region"></h6>
+                </div>
+                <div class="carousel-birthday">
+                  <i class="fa-solid fa-gift" style=" color: #ffffff;"></i>
+                  <h6 id="third-carousel-birthday"></h6>
+                </div>
+                <div class="carousel-age">
+                  <i class="fa-solid fa-calendar-check" style=" color: #ffffff;"></i>
+                  <h6 id="third-carousel-age"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- 使用者列表 -->
+  <div class="container d-flex flex-wrap justify-content-center" id="card-panel">
+    <!-- 卡片放置處 -->
+    <!--     <div class="card text-bg-dark flex-column m-2">
+    <img src="${results.avatar}" class="card-img" alt="friends-img data-id="${results.id}">
+    <div class="heart-icon card-img-overlay">
+            <i type="button" class="fa-sharp fa-regular fa-heart fa-xl btn-favorite" data-id="${results.id}"></i>    
+          </div>
+    <div class="card-img-overlay">
+      <h5 class="card-name" data-bs-toggle="modal" data-bs-target="#exampleModal" modal-dialog-centered data-id="${results.id}">${results.name} ${results.surname}</h5>
+      
+    </div>
+  </div>  -->
+
+  </div>
+
+
+  <!-- paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="paginator">
+      <!--     <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    </ul>
+  </nav>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modal-card">
+        <div class="modal-header">
+          <h1 class="modal-title" id="friends-name">${user.name} ${user.surname}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="movie-modal-body">
+          <div class="outerring">
+            <div class="friends-img">
+              <img id="friends-img" src="https://robohash.org/repellatvoluptateomnis.png?size=300x300&set=set1"
+                class="friends-img" alt="">
+              <div class="animation">
+              </div>
+
+            </div>
+          </div>
+          <br>
+          <div class="heart-icon-modal card-img-overlay">
+            <i type="button" class="fa-sharp fa-regular fa-heart fa-xl modal-btn-favorite" id="modal-heart" data-id=""></i>    
+             </div>
+          <div class="friends-info">
+            <div class="friends-info-item">
+              <i class="fa-solid fa-globe " style=" color: #ffffff;"></i>
+              <p id="friends-region">"Romania"</p>
+            </div>
+            <div class="friends-info-item">
+              <i class="fa-solid fa-transgender" style=" color: #ffffff;"></i>
+              <p id="friends-gender">"male"</p>
+            </div>
+            <div class="friends-info-item">
+              <i class="fa-solid fa-gift" style=" color: #ffffff;"></i>
+              <p id="friends-birthday">"12/14/1990"</p>
+            </div>
+            <div class="friends-info-item">
+              <i class="fa-solid fa-calendar-check" style=" color: #ffffff;"></i>
+              <p id="friends-age"> 29</p>
+            </div>
+            <div class="friends-info-item">
+              <i class="fa-solid fa-envelope-circle-check" style=" color: #ffffff;"></i>
+              <p id="friends-email"> "tudor-pogor@example.com"</p>
+            </div>
+          </div>
+          
+        </div> 
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 先引用 axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
+
+  <!-- 載入自己的JS檔案 -->
+  <script src="./index.js"></script>
+
+  <!-- 載入 bootstrap@5.3 提供的JavaScript 檔案 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+
+  <!-- 載入 fontawesome.com 提供的JavaScript 檔案 -->
+  <script src="https://kit.fontawesome.com/0ddd9c88aa.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

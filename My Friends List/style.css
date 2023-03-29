@@ -1,0 +1,205 @@
+body {
+  font-family: 'Noto Sans Display', sans-serif;
+  background-color: powderblue;
+/*   background: linear-gradient(145deg, #fafafa, #05480d) fixed center center; */
+}
+
+.badge {
+  border-radius: 50px;
+/*   outline: 3px solid tomato; */
+}
+
+/* card-Panel */
+.card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+}
+
+/* .card:hover {
+  cursor: pointer;
+} */
+
+h5 {
+  text-shadow: 1px 1px 1px;
+  font-size: 16px;
+/*   outline: 3px solid tomato; */
+}
+
+h5:hover {
+  text-shadow: 2px 3px 3px;
+  font-size: 18px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.card-img {
+  border-radius: 20px;
+}
+
+.btn-favorite, .btn-heart-crack {
+  position: relative;
+  z-index: 1;
+  top: 50px;
+  left: 160px;
+/*   outline: 3px solid tomato; */
+}
+
+
+/* Modal */
+.modal-content {
+  width: 660px;
+/*   outline: 3px solid tomato; */
+}
+
+.modal-body {
+/*   margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  display: flex;
+  background-color: black;
+  border-radius: 0px 0px 5px 5px;
+  justify-content: space-evenly;
+  align-items: center;
+/*     outline: 3px solid tomato; */
+}
+
+#modal-heart {
+  position: relative;
+  z-index: 1;
+  top: 30px;
+  left: 280px;
+  /* color: #ffffff; */
+/*   outline: 3px solid tomato; */
+}
+
+.heart-icon-modal {
+  color: #ffffff;
+}
+
+
+h1 {
+  font-size: 28px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+}
+
+.friends-img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+/*   outline: 6px solid #f4f4f1; */
+  background-color: #ffffff;
+/*   box-shadow: 0 5px 12px #198754; */
+  z-index: 5;
+}
+
+.friends-info, .carousel-info {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+/*  outline: 3px solid tomato; */
+}
+
+.friends-info-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.carousel-region, .carousel-birthday, .carousel-age {
+  display: flex;
+  align-items: baseline;
+  font-size: 25px;
+}
+
+h6 {
+  margin-left: 10px;
+ font-size: 25px;
+  color: #ffffff;
+/*   outline: 3px solid tomato; */
+}
+
+p {
+  margin-left: 10px;
+  font-size: 17px;
+  color: #ffffff;
+  /*   outline: 3px solid tomato; */
+}
+
+h3 {
+  text-shadow: 1px 1px 1px;
+/*   outline: 3px solid tomato; */
+}
+
+h3:hover {
+  text-shadow: 2px 3px 3px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+/* redHeart */
+.redHeart {
+  color: #e20147;
+}
+
+/* page */
+.page-link {
+ border-color: #198754;
+}
+
+
+/* animation */
+.outerring
+{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  
+}
+
+
+#modal-card[data-gender="male"] .animation:before
+{
+  width: 230px;
+  height: 230px;
+  content: '';
+  position: absolute;
+  inset: -15px;
+  background: linear-gradient(#accfec,#072364);
+  border-radius: 50%;
+  animation: animate 3s linear infinite;
+} 
+
+
+#modal-card[data-gender="female"] .animation:before
+{
+  width: 230px;
+  height: 230px;
+  content: '';
+  position: absolute;
+  inset: -15px;
+  background: linear-gradient(#640747,#ebacec);
+  border-radius: 50%;
+  animation: animate 3s linear infinite;
+} 
+
+
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(360deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
